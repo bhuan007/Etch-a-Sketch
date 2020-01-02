@@ -1,7 +1,40 @@
 <!DOCTYPE html>
-<head>
+<html>
 
+
+<head>
+    <title>Etch-a-Sketch!</title>
+    <link type="text/css" rel="stylesheet" href="styles/style.css">
 </head>
 <body>
+    <div id = "title" class="title">
+        <h1>Welcome to Etch-a-Sketch!</h1>
+    </div>
     
+
+    <form>
+        Number of Rows and Columns (max 150): <input type="number" id="dimension" value="16">
+        <input type="button" value="Enter" id="genBtn">
+        Choose a color: 
+        <select id="colorSelection" onchange="getColor(); startColor(color);">
+            <option value="black">Black</option>
+            <option value="eraser">Eraser</option>
+            <option value="rainbow">Rainbow</option>
+        </select>
+        
+    </form>
+
+    <p><b>Directions:</b>
+        Click on the canvas to toggle drawing.
+    </p>
+    <div class="drawingToggle"></div>
+    
+    
+
+    <div id="container"></div>
+
+
+
+    <script type="text/javascript" src="scripts/script.js"></script>
 </body>
+</html>
